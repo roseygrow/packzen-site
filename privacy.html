@@ -73,15 +73,20 @@ suggestions are generated on the device itself. Your text is not sent to us or t
 not require sharing anything with us.</p>
 
 <h2>Measuring our own advertising</h2>
-<p>We advertise PackZen on TikTok and Meta. To know whether an ad led to an install, we rely on
-Apple's SKAdNetwork: from version 1.1 the app tells Apple how far you got — a trip was created,
-a list was completed, the upgrade screen was shown, a purchase was made — as a single number, and
-Apple passes that number to the ad network without identifying you or your device. We never ask
-for permission to track you, and the advertising identifier is not collected. To see which ads pay
-for themselves, RevenueCat reports purchases to our TikTok and Meta ad accounts from its servers,
-together with the identifier Apple assigns to this app on your device. No trip details, dates or
-items are sent anywhere. None of this is linked to your name or Apple Account, and it is not used
-to track you across other companies' apps or websites.</p>
+<p>We advertise PackZen on Meta (Facebook and Instagram) and TikTok. From version 1.1 the app
+includes the Meta SDK and the TikTok Business SDK so that those networks can tell whether an ad
+led to an install and whether the app was worth it. Each SDK receives an anonymous identifier
+it generates for this app on your device, your IP address, general device information such as
+the model and iOS version, app launches, a few milestones (a trip was created, a list was
+completed, the upgrade screen was shown) and purchases made through the App Store. No trip
+details, dates or items are sent. Install attribution itself goes through Apple's SKAdNetwork,
+which passes the network a single number without identifying you or your device. We never ask
+for permission to track you, and the advertising identifier (IDFA) is not collected. How the
+networks handle this data is described in the
+<a href="https://www.facebook.com/privacy/policy/">Meta Privacy Policy</a> and the
+<a href="https://www.tiktok.com/legal/page/global/privacy-policy/en">TikTok Privacy Policy</a>.
+For Apple Search Ads, Apple gives the app an attribution token that our subscription provider,
+RevenueCat, uses to match a purchase to a campaign; it contains no personal data.</p>
 
 <h2>Usage statistics and crash reports</h2>
 <p>From version 1.1 the app uses <a href="https://firebase.google.com/support/privacy">Google
